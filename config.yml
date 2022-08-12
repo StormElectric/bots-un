@@ -1,4 +1,4 @@
-token: "lip_P0zmGx4WA6Yk554kM9Ah"   # Lichess OAuth2 Token.
+token: "lip_jD4a1uFGdgfPv3TK6aZr"   # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -82,7 +82,7 @@ challenge:                   # Incoming challenges.
   max_base: 315360000        # Maximum amount of base time to accept a challenge. The max is 315360000 (10 years).
   min_base: 0                # Minimum amount of base time to accept a challenge.
   variants:                  # Chess variants to accept (https://lichess.org/variant).
-    - standard
+#   - standard
 #   - fromPosition
     - antichess
     - atomic
@@ -100,4 +100,14 @@ challenge:                   # Incoming challenges.
 #   - correspondence
   modes:                     # Game modes to accept.
     - casual                 # Unrated games.
-#   - rated                  # Rated games - must comment if the engine doesn't try to win.
+    - rated                  # Rated games - must comment if the engine doesn't try to win.
+
+greeting:
+  # Optional substitution keywords (include curly braces):
+  #   {opponent} to insert opponent's name
+  #   {me} to insert bot's name
+  # Any other words in curly braces will be removed.
+  hello: "Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond to." # Message to send to opponent chat at the start of a game
+  goodbye: "Good game!" # Message to send to opponent chat at the end of a game
+  hello_spectators: "Hi! I'm {me}. Type !help for a list of commands I can respond to." # Message to send to spectator chat at the start of a game
+  goodbye_spectators: "Thanks for watching!" # Message to send to spectator chat at the end of a game
